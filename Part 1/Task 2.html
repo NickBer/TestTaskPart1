@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 2</title>
+</head>
+
+<body>
+    <form id="num23form">
+        <label for="num">Number</label>
+        <input id="num" oninput="numOnInput(this.value)" type="number">
+        <p>
+            <button id="setBtn" onclick="setStorage()" disabled>Set</button>
+            <button id="resetBtn" onclick="clearStorage()" type="reset">Clear</button>
+        </p>
+        <p id=""></p>
+    </form>
+
+    <script>
+        function numOnInput(value) {
+            //disable button when field is empty
+            if (value === "") {
+                document.getElementById("setBtn").disabled = true;
+            } else {
+                document.getElementById("setBtn").disabled = false;
+            }
+        }
+
+        function setStorage() {
+            let number = document.getElementById(`num`).value;
+            localStorage.setItem('num23', number);
+        }
+
+        function clearStorage() {
+            localStorage.removeItem('num23');
+        }
+
+        function loadNum23() {
+            let p = document.createElement('p');
+            let num23 = localStorage.getItem('num23');
+            p.innerHTML = num23;
+            num23%2===0?
+            p.style.backgroundColor='green':
+            p.style.backgroundColor='red';
+            document.getElementById('num23form').before(p);
+        }
+
+        if (document.readyState == 'loading') {
+            document.addEventListener('DOMContentLoaded', loadNum23);
+        } else {
+            loadNum23();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "test_task_for_vjet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "chai": "^4.2.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

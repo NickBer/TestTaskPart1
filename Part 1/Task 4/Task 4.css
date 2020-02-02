@@ -1,0 +1,37 @@
+
+ul#productList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li>.product-image {
+    width: 100%;
+}
+
+li>.option {
+    text-align: left;
+}
+
+li>.price {
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+li>.optionsTitle{
+    color: black;
+
+}
+
+ul#productList>li {
+    width: 29%;
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid rgb(192, 192, 192);
+    float: left;
+    color:grey;
+    text-align: center;
+}
